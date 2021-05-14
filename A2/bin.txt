@@ -1,0 +1,22 @@
+Since he knows K, he basically knows $g^{ab+pb}\mod N$ and he even knows $v=g^p\mod N$, $A=g^a\mod N$ and $B=g^b\mod N$. So he could do the following:
+    \begin{align*}
+        K=g^{ab+pb}\mod N\\
+        K= (g^{ab}\mod N *g^{pb}\mod N) \mod N\\
+        \frac{K}{g^{bp}}\mod N=g^{ab}\mod N
+    \end{align*}
+    Thus they know the $g^{ab}=\frac{K}{g^pb}$ and thus solving diffie hellman problem???????????????????????????????.\\\\
+
+
+
+Since the $K=(g^q)^{ab}$, and since we know $ab$ is a big number and $m$ is a small number. So $abq$ could be represented as $(ab)q=l(mq)+r$ where $l,r \in \mathds{Z}$ and $0\le r\le mq-1$. We know using Fermat's little theorem that $a^{p-1} \equiv 1 \mod p$. We also know that $p=mq+1$ which entails $mq=p-1$. So, 
+\begin{align*}
+    g^{(ab)q}\mod p &= g^{l(mq)+r}\mod p\\
+    &= g^{l(mq)+r}\\
+    &= (g^{l(mq)}\mod p )* (g^r \mod p)\\
+    &= (g^{l(p-1)}\mod p )* (g^r \mod p)\\
+    &= ((g^{p-1})^l\mod p)* (g^r \mod p)\\
+    &= (1^l\mod p)* (g^r \mod p)\\
+    &= 1* (g^r \mod p)\\
+    &= (g^r \mod p)
+\end{align*}
+********************************************\\

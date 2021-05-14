@@ -1,0 +1,15 @@
+createsocket					socket/None
+send						lengthSent/None
+receive						data/b''
+safeprime					return N/2
+primroot					retrun g
+calc_X			s,pw			int=>h(s||pw)
+calc_A			N,g,a			int=>g^a mod n
+calc_B			N,g,b,k,v		int=>kv g^b mod n
+calc_u			A,B			int=>h(A||B)
+calc_K_client		N,B,k,v,a,u,x		int=>(B-kv)^(a+ux) mod N
+calc_K_server		N,A,b,v,u		int=>(A v^u)^b mod N
+calc_M1			A,B,Kclient		bytes=>h(A||B||Kclient)
+calc_M2			A,M1,kserver		bytes=>h(A||M1||kserver)
+clientprepare					bytes=>16 byte salt
+serverprepare					(int,int,byte)=>(N,g,h(N||g))
